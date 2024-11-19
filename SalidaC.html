@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Salida de Carbón - CARBONES FESE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('imagenes/carbonera.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+        }
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        label, select, input[type="text"], input[type="tel"], input[type="date"], input[type="submit"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        input[type="submit"], button {
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CARBONES FESE</h1>
+        <nav>
+            <a href="inicial.html">Inicio</a>
+            <a href="INventario.html">Inventario</a>
+            <a href="ResgistroE.html">Entradas</a>
+            <a href="ResgistroS.html">Salidas</a>
+            <a href="index.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Registrar Salida de Carbón</h2>
+            <form id="salidaC-form" onsubmit="submitForm(event)">
+                <label for="tipo-carbon">Tipo de Carbón</label>
+                <select id="tipo-carbon" name="tipo_carbon" required>
+                    <option value="">Seleccione el tipo</option>
+                    <option value="alto_volatil">Alto Volátil</option>
+                    <option value="medio_volatil">Medio Volátil</option>
+                    <option value="bajo_volatil">Bajo Volátil</option>
+                </select>
+
+                <label for="nombre-cliente">Nombre del Cliente</label>
+                <input type="text" id="nombre-cliente" name="nombre_cliente" placeholder="Ingrese el nombre del cliente" required>
+
+                <label for="contacto-cliente">Contacto del Cliente</label>
+                <input type="tel" id="contacto-cliente" name="contacto_cliente" placeholder="Ingrese el contacto del cliente" required>
+
+                <label for="fecha-salida">Fecha de Salida</label>
+                <input type="date" id="fecha-salida" name="fecha_salida" required>
+
+                <input type="submit" value="Registrar Salida">
+            </form>
+            <button onclick="location.href='inicial.html';">Regresar</button>
+        </div>
+    </main>
+
+    <script>
+        // Función que se ejecuta cuando el formulario se envía
+        function submitForm(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
+
+            // Aquí puedes agregar la lógica para procesar los datos (puedes agregar una llamada AJAX si es necesario)
+
+            // Mostrar mensaje de éxito
+            alert('Datos registrados con éxito. Puedes ingresar otros datos.');
+
+            // Limpiar los campos del formulario
+            document.getElementById('salidaC-form').reset();
+
+            // Opción 1: Recargar la página después de un retraso para permitir al usuario ver el mensaje de éxito
+            setTimeout(function() {
+                location.reload(); // Recargar la página
+            }, 500); // Retraso de 500ms para asegurar que el mensaje de éxito sea visible
+        }
+    </script>
+</body>
+</html>

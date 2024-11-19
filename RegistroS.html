@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salidas de Carbón - CARBONES FESE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            background-image: url('imagenes/carbonera.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .entries-container {
+            width: 80%;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CARBONES FESE</h1>
+        <nav>
+            <a href="inicial.html">Inicio</a>
+            <a href="INventario.html">Inventario</a>
+            <a href="ResgistroE.html">Entradas</a>
+            <a href="ResgistroS.html">Salidas</a>
+            <a href="index.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+    <main>
+        <div class="entries-container">
+            <h2>Registros de Salidas de Carbón</h2>
+            
+            <!-- Tabla de registros de salidas -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo de Carbón</th>
+                        <th>Cantidad (Kg)</th>
+                        <th>Cliente</th>
+                        <th>Contacto</th>
+                    </tr>                
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

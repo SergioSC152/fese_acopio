@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -30,22 +31,19 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
         .form-container {
             width: 100%;
-            max-width: 400px; /* Ancho máximo de l formulario */
+            max-width: 400px; /* Ancho máximo del formulario */
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8); 
+            background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-
         .form-container h2 {
             margin-bottom: 20px;
             color: #333;
         }
-        
         input[type="email"], input[type="password"] {
             width: 100%;
             padding: 10px;
@@ -53,7 +51,6 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-        
         input[type="submit"] {
             width: 100%;
             padding: 10px;
@@ -63,11 +60,9 @@
             border-radius: 4px;
             cursor: pointer;
         }
-
         input[type="submit"]:hover {
             background-color: #555;
         }
-        
         .redirect {
             margin-top: 10px;
             color: #333;
@@ -81,7 +76,7 @@
     <main>
         <div class="form-container">
             <h2>Inicia Sesión</h2>
-            <form action="login_proceso.php" method="POST">
+            <form action="inicial.html" method="get"> <!-- Redirige al dashboard después de iniciar sesión -->
                 <input type="email" name="email" placeholder="Correo electrónico" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <input type="submit" value="Iniciar Sesión">

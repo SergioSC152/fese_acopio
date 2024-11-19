@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARBONES FESE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header img {
+            height: 50px;
+            margin-left: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .dashboard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px); /* Altura menos el header */
+            background-image: url('imagenes/carbonera.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .options-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 1200px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .option {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 45%;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #e0e0e0;
+        }
+        .option h2 {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CARBONES FESE</h1>
+        <nav>
+            <a href="inicial.html">Inicio</a>
+            <a href="INventario.html">Inventario</a>
+            <a href="ResgistroE.html">Entradas</a>
+            <a href="ResgistroS.html">Salidas</a>
+            <a href="index.html">Cerrar Sesión</a>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <div class="options-container">
+            <div class="option" onclick="location.href='EntradaC.html';">
+                <h2>Entrada de Carbón</h2>
+                <p>Registrar nueva entrada de carbón al acopio.</p>
+            </div>
+            <div class="option" onclick="location.href='SalidaC.html';">
+                <h2>Salida de Carbón</h2>
+                <p>Registrar salida de carbón desde el acopio.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
